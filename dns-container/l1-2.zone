@@ -1,0 +1,19 @@
+;
+; Fichier de zone pour l1-2.ephec-ti.be
+;
+$TTL 1h
+@       IN      SOA     ns.l1-2.ephec-ti.be. admin.l1-2.ephec-ti.be. (
+                        2024031601      ; Serial
+                        3h              ; Refresh
+                        1h              ; Retry
+                        1w              ; Expire
+                        1h              ; Minimum TTL
+                        )
+
+; Définition des serveurs de noms
+@       IN      NS      ns.l1-2.ephec-ti.be.
+
+; Définition des enregistrements A
+ns      IN      A       54.37.12.14
+www     IN      CNAME   ns
+blog    IN      CNAME   ns
