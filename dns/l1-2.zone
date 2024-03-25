@@ -17,3 +17,4 @@ $TTL 1h
 ns      IN      A       54.37.12.14
 www     IN      CNAME   ns
 blog    IN      CNAME   ns
+github	IN	CNAME	https://github.com/4lex42/Admin2/
