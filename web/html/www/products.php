@@ -1,12 +1,12 @@
 <html>
 <style>
-      table,
-      th,
-      td {
-        padding: 10px;
-        border: 1px solid black;
-        border-collapse: collapse;
-      }
+	table,
+	th,
+	td {
+		padding: 10px;
+		border: 1px solid black;
+		border-collapse: collapse;
+	}
 </style>
 
 <head>
@@ -17,10 +17,10 @@
 <h1>Catalogue WoodyToys</h1>
 
 <?php
-$dbname = 'woodytoys';
-$dbuser = 'root';
-$dbpass = 'mypass';
-$dbhost = 'db';
+$dbname = getenv('MYSQL_DATABASE');
+$dbuser = getenv('MYSQL_USER');
+$dbpass = getenv('MYSQL_PASSWORD');
+$dbhost = getenv('MYSQL_HOST');
 $connect = mysqli_connect($dbhost, $dbuser, $dbpass) or die("Unable to connect to '$dbhost'");
 mysqli_select_db($connect,$dbname) or die("Could not open the database '$dbname'");
 $result = mysqli_query($connect,"SELECT id, name, price FROM products");
@@ -28,14 +28,14 @@ $result = mysqli_query($connect,"SELECT id, name, price FROM products");
 
 <table>
 <tr>
-    <th>Numéro de produit</th>
-    <th>Descriptif</th> 
-    <th>Prix</th>
+	<th>Numéro de produit</th>
+	<th>Descriptif</th>
+	<th>Prix</th>
 </tr>
+
 <?
 while ($row = mysqli_fetch_array($result)) {
-        printf("<tr><th>%s</th> <th>%s</th> <th>%s</th></tr>", $row['id'], $row['name'], $row['price']);
-
+	printf("<tr><th>%s</th> <th>%s</th> <th>%s</th></tr>",$row[0],$row[1],$row[2]);
 }
 ?>
 
