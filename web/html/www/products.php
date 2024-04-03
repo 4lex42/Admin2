@@ -17,10 +17,10 @@
 <h1>Catalogue WoodyToys</h1>
 
 <?php
-$dbname = getenv('MYSQL_DATABASE');
-$dbuser = getenv('MYSQL_USER');
-$dbpass = getenv('MYSQL_PASSWORD');
-$dbhost = getenv('MYSQL_HOST');
+$dbname = getenv('DB_NAME');
+$dbuser = getenv('DB_USER');
+$dbpass = getenv('DB_PASSWORD');
+$dbhost = getenv('DB_HOST');
 $connect = mysqli_connect($dbhost, $dbuser, $dbpass) or die("Unable to connect to '$dbhost'");
 mysqli_select_db($connect,$dbname) or die("Could not open the database '$dbname'");
 $result = mysqli_query($connect,"SELECT id, name, price FROM products");

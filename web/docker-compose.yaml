@@ -13,16 +13,16 @@ services:
       - ./nginx.conf:/etc/nginx/nginx.conf
       - ./html/:/var/www/html
     networks:
-      - api
+      - web
   db:
     image: mariadb
     container_name: db
     hostname: db
     environment:
-      MYSQL_ROOT_PASSWORD: ${ROOT_PASS}
-      MYSQL_DATABASE: ${DATABASE}
-      MYSQL_USER: ${USER_DB}
-      MYSQL_PASSWORD: ${USER_PASS}
+      DB_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+      DB_NAME: ${DB_NAME}
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
     volumes:
       - ./db/sql:/docker-entrypoint-initdb.d
       - ./db/conf/my-resolve.cnf:/etc/mysql/conf.d/my-resolve.cnf
@@ -36,15 +36,15 @@ services:
     depends_on:
       - db
     environment:
-      MYSQL_DATABASE: ${DATABASE}
-      MYSQL_USER: ${PHP_USER}
-      MYSQL_PASSWORD: ${PHP_PASS}
-      MYSQL_HOST: ${PHP_HOST}
+      DB_NAME: ${DB_NAME}
+      DB_USER: ${PHP_USER}
+      DB_PASSWORD: ${PHP_PASSWORD}
+      DB_HOST: ${PHP_HOST}
     volumes:
       - ./html:/var/www/html
     networks:
-      - api
+      - web
       - db
 networks:
-  api:
+  web:
   db:
