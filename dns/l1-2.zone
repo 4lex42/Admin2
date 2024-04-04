@@ -6,7 +6,7 @@ $TTL 86400	; 1d
 @       IN      SOA     ns.l1-2.ephec-ti.be. admin.l1-2.ephec-ti.be. (
                         2001062511	; Serial
                         21600		; Refresh (6h)
-                        900		; Retry (15min)
+                        3600		; Retry (1h)
                         604800		; Expire (1w)
                         86400		; Minimum TTL (1d)
                         )
