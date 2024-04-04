@@ -1,13 +1,14 @@
 ;
 ; Fichier de zone pour l1-2.ephec-ti.be
 ;
-$TTL 1h
+$ORIGIN l1-2.ephec-ti.be.
+$TTL 86400	; 1d
 @       IN      SOA     ns.l1-2.ephec-ti.be. admin.l1-2.ephec-ti.be. (
-                        2001062511      ; Serial
-                        21600              ; Refresh (6h)
-                        900              ; Retry (15min)
-                        604800              ; Expire (1w)
-                        86400              ; Minimum TTL (1d)
+                        2001062511	; Serial
+                        21600		; Refresh (6h)
+                        900		; Retry (15min)
+                        604800		; Expire (1w)
+                        86400		; Minimum TTL (1d)
                         )
 
 ; Définition des serveurs de noms
