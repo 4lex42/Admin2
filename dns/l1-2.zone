@@ -3,11 +3,11 @@
 ;
 $TTL 1h
 @       IN      SOA     ns.l1-2.ephec-ti.be. admin.l1-2.ephec-ti.be. (
-                        2024031601      ; Serial
-                        3h              ; Refresh
-                        1h              ; Retry
-                        1w              ; Expire
-                        1h              ; Minimum TTL
+                        2001062511      ; Serial
+                        21600              ; Refresh (6h)
+                        900              ; Retry (15min)
+                        604800              ; Expire (1w)
+                        86400              ; Minimum TTL (1d)
                         )
 
 ; Définition des serveurs de noms
@@ -17,4 +17,3 @@ $TTL 1h
 ns      IN      A       54.37.12.14
 www     IN      CNAME   ns
 blog    IN      CNAME   ns
-github	IN	CNAME	https://github.com/4lex42/Admin2/.
