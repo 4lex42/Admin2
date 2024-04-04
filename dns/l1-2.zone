@@ -14,6 +14,9 @@ $TTL 86400	; 1d
 ; Définition des serveurs de noms
 @       IN      NS      ns.l1-2.ephec-ti.be.
 
+; Challenge ssl
+_acme-challenge.l1-2.ephec-ti.be.	IN	TXT	9DGd1jUiXPLno9mnUbRmkgtLVC413AHNruvadqdQVWU
+
 ; Définition des enregistrements A
 ns      IN      A       54.37.12.14
 www     IN      CNAME   ns

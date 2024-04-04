@@ -11,9 +11,8 @@ services:
       - "80:80"
       - "443:443"
     volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf
       - ./html/:/var/www/html
-      - ../certif:/etc/ssl
+      - ../certificate:/etc/letsencrypt
     networks:
       - web
   db:
@@ -21,10 +20,10 @@ services:
     container_name: db
     hostname: db
     environment:
-      DB_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
-      DB_NAME: ${DB_NAME}
-      DB_USER: ${DB_USER}
-      DB_PASSWORD: ${DB_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${DB_NAME}
+      MYSQL_USER: ${DB_USER}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
     volumes:
       - ./db/sql:/docker-entrypoint-initdb.d
       - ./db/conf/my-resolve.cnf:/etc/mysql/conf.d/my-resolve.cnf
@@ -38,10 +37,10 @@ services:
     depends_on:
       - db
     environment:
-      DB_NAME: ${DB_NAME}
-      DB_USER: ${PHP_USER}
-      DB_PASSWORD: ${PHP_PASSWORD}
-      DB_HOST: ${PHP_HOST}
+      MYSQL_DATABASE: ${DB_NAME}
+      MYSQL_USER: ${PHP_USER}
+      MYSQL_PASSWORD: ${PHP_PASSWORD}
+      MYSQL_HOST: ${PHP_HOST}
     volumes:
       - ./html:/var/www/html
     networks:
