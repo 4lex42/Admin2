@@ -14,10 +14,23 @@ $TTL 86400	; 1d
 ; Définition des serveurs de noms
 @       IN      NS      ns.l1-2.ephec-ti.be.
 
+; Définition des serveurs mail
+@	IN	MX	10	mail.l1-2.ephec-ti.be.
+
 ; Challenge ssl
 _acme-challenge.l1-2.ephec-ti.be.	IN	TXT	9DGd1jUiXPLno9mnUbRmkgtLVC413AHNruvadqdQVWU
 
+; Mail Security
+l1-2.ephec-ti.be. IN TXT "v=spf1 mx -all"
+
+mail._domainkey IN      TXT     ( "v=DKIM1; h=sha256; k=rsa; "
+          "p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqTd2AABLmem/8JAq9So1qE0leAgGU2vzzyba6G1RP/ALGRto2YsLquOXkXv4eJygKO1O4X+o3ZkYaErucWeycKS43lnSFxMk35tuO38/GLGDR3qOt7oluHvD/ZGAIfG+eUsbDBLqEtu7ko88bqNtZV3n/ffEWbinAlcdUVs5SLNgvipMlq4ciTu7c4z4oZVHGkBzSBY+Hp851v"
+          "hJrbPvRE5o7bhQjpbm5fSas+TIeIK8fYdL38cdFSoVASFROzsHROKaQldvAtEdTAp6nqcvva8PEXOw1XTeDfzFMGTE4DIY228b4UuZUxX7oWWg/Syqm85HU6GG/NvvgMvlbxjbRQIDAQAB" )  ; ----- DKIM key mail for l1-2.ephec-ti.be
+
+_dmarc.l1-2.ephec-ti.be. IN TXT "v=DMARC1; p=reject; rua=mailto:pl@l1-2.ephec-ti.be; ruf=mailto:pl@l1-2.ephec-ti.be; sp=none; ri=86400"
+
 ; Définition des enregistrements A
 ns      IN      A       54.37.12.14
-www     IN      CNAME   ns
-blog    IN      CNAME   ns
+www     IN      A	54.37.12.14
+blog    IN      A	54.37.12.14
+mail	IN	A	54.37.12.14

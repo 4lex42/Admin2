@@ -1,0 +1,10 @@
+Apr 14 21:19:21 mail amavis[721]: (!)Net::Server: 2024/04/14-21:19:21 Re-exec server during HUP
+Apr 14 21:19:21 mail dovecot: master: Warning: SIGHUP received - reloading configuration
+Apr 14 21:19:56 mail amavis[721]: (!)Net::Server: 2024/04/14-21:19:56 Re-exec server during HUP
+Apr 14 21:19:56 mail dovecot: master: Warning: SIGHUP received - reloading configuration
+Apr 14 21:32:24 mail amavis[721]: (!)Net::Server: 2024/04/14-21:32:24 Re-exec server during HUP
+Apr 14 21:32:24 mail dovecot: master: Warning: SIGHUP received - reloading configuration
+Apr 14 21:33:03 mail amavis[721]: (!)Net::Server: 2024/04/14-21:33:03 Re-exec server during HUP
+Apr 14 21:33:03 mail dovecot: master: Warning: SIGHUP received - reloading configuration
+Apr 14 21:33:20 mail amavis[721]: (!)Net::Server: 2024/04/14-21:33:20 Re-exec server during HUP
+Apr 14 21:33:20 mail dovecot: master: Warning: SIGHUP received - reloading configuration

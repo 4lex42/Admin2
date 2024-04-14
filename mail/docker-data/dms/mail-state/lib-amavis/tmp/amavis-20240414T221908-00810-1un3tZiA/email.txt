@@ -1,0 +1,21 @@
+Message-ID: <1d953bbf-c965-4c49-b04c-1747a0009cc3@l1-2.ephec-ti.be>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=l1-2.ephec-ti.be;
+	s=mail; t=1713133694;
+	bh=7Zxc9bTvthInIE89UkUKLFagxf8gXwtNN7bmadsCB04=; h=To:From:Subject;
+	b=SdlgYxuLgPWJEyGa6nfCzoTE2og8VHknA9DZnGxiQ5uWa1McXWlv8FTC6kWJnLISE
+	 6ghNSl6yYNN7MIBE47Twkoai4kvkUYLrUGR+jxwMpqmrFq9jjoAgYukjRMEJ8qdeHR
+	 bNX3DzdFKM8/s+G/jgayuDSV7fkf19lTEF6tAZq4bc42uwgkTRz6YepNzeTcJL4aAG
+	 Ftq1P+RixmjiiiPP+fZTCpI0AJ99+dpEJCPFETExFig7SGof+5o5TDbVXUvBG59xF6
+	 5izm7NaiP8VwkzZq+A0bqhr7HXq4akx7FsTcmTlbnZ1BeyRKwSSRSehXQ+k7XGgQaX
+	 plLNv6re0CuGg==
+Date: Mon, 15 Apr 2024 00:28:07 +0200
+MIME-Version: 1.0
+Content-Language: fr
+To: 3V24KdqDE9tTup@dkimvalidator.com
+From: =?UTF-8?Q?Pierre-Louis_Lef=C3=A8vre?= <pl@l1-2.ephec-ti.be>
+Subject: dkim valid
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+
+valid?
+
